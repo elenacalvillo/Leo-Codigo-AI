@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
       setIsLoading(true);
       const res = await fetch(`/api/openai`, {
         body: JSON.stringify({
-          name: search
+          code: search
         }),
         headers: {
           'Content-Type': 'application/json'
@@ -29,23 +28,24 @@ export default function Home() {
     fetchData();
   }, [search]);
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>GPT-3 App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main>
+        <h1 className="text-3xl font-bold underline">
           <a>AI Lyrics Generator</a>
         </h1>
 
-        <p className={styles.description}>Built with NextJS & GPT-3 API</p>
+        <p>Built with NextJS & GPT-3 API</p>
 
-        <div className={styles.grid}>
-          <div className={styles.card}>
+        <div>
+          <div>
             <h3>Enter Artist:</h3>
             <input
+            className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           type="text"
           value={query}
           onChange={event => setQuery(event.target.value)}
