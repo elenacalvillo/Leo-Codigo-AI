@@ -1,8 +1,9 @@
 import Head from "next/head";
-import Image from 'next/image'
 import { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import 'highlight.js/styles/base16/rebecca.css';
+import hljs from 'highlight.js';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -19,6 +20,7 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
  
   useEffect(() => {
+    hljs.highlightAll();
     const fetchData = async () => {
       if (search) {
       setIsLoading(true);
@@ -43,6 +45,7 @@ export default function Home() {
       <Head>
         <title>GPT-3 App</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
       </Head>
 
       <main>
@@ -183,7 +186,8 @@ export default function Home() {
                   Data to enrich your online business
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
+                  amet fugiat veniam occaecat fugiat aliqua.
                 </p>
                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                   <a
@@ -212,9 +216,8 @@ export default function Home() {
                   <div className="mx-auto flex space-x-20 sm:justify-center">
                     <div>
                       <h3 className="text-lg font-medium leading-6 text-gray-900">¿Quieres entender el código?</h3>
-                      <p className="mt-1 text-md text-gray-500">Deja que Leo se encargue de explicarlo.</p>
+                      <p className="mt-1 max-w-2xl text-sm text-gray-500">Deja que Leo se encargue de explicarlo.</p>
                     </div>
-                    <Image src="/leo.svg" alt="Leo Pawie Walking" width={100} height={50} />
                     <button className="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
                     type="button"
                     onClick={() =>
@@ -228,7 +231,7 @@ export default function Home() {
                   </button>
                   </div>
                 
-                <article class="prose lg:prose-xl prose-code:text-pink-200 prose-pre-code:text-pink-500 py-10 pb-2">
+                <article class="prose lg:prose-xl py-10 pb-2">
                   <input type="text" placeholder="Pega tu código aquí..." class="block w-full p-2 text-base border border-gray-100 rounded-lg bg-slate-200 focus:ring-blue-500 focus:border-blue-500" value={query}
                   onChange={event => setQuery(event.target.value)}
                   />
@@ -242,17 +245,31 @@ export default function Home() {
               
               <div className="overflow bg-white shadow sm:rounded-lg mt-10">
                 <div className="px-4 py-5 sm:px-6">
-                  <h2 className="text-2xl font-medium text-gray-900">¿Qué hace este código?</h2>
-                  {isLoading ? (
-                    <div className="p-6 flex items-center justify-between">
-                     <h4 className="text-xl font-bold text-rose-700"> Analizando ... </h4>
-                     <Image src="/leo-walking.gif" alt="Leo Pawie Walking" width={500} height={500} />
-                    </div>
-                 ) : (
-                    <article className="prose">
-                      {data.text}
-                    </article>                     
-                   )}
+                  <h2 className="text-lg font-medium leading-6 text-gray-900">¿Qué hace este código?</h2>
+                  <p className="mt-1 max-w-2xl text-sm text-gray-600">
+                    {isLoading ? (
+                      <div>Loading ...</div>
+                   ) : (
+                     <span>
+                     {data.text}
+                     </span>
+                     )}
+                  </p>
+                </div>
+              </div>
+
+              
+              <div className="overflow-hidden bg-white shadow sm:rounded-lg my-40">
+                <div className="px-4 py-5 sm:px-6">
+                  <h3 className="text-lg font-medium leading-6 text-gray-900">Applicant Information</h3>
+                  <p className="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p>
+                </div>
+                <div className="border-t border-gray-200">
+                  <pre className="whitespace-pre-wrap" contenteditable="true">
+                    <code className="html">
+                  {`<div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"></div>`}
+                </code>
+              </pre>
                 </div>
               </div>
 

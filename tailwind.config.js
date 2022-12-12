@@ -4,8 +4,18 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [{
+    pattern: /hljs+/,
+  }],
   theme: {
+    hljs: {
+      theme: 'night-owl',
+    },
     extend: {},
   },
-  plugins: [],
+  variants: {},
+  plugins: [
+    require('tailwind-highlightjs'),
+    require('@tailwindcss/typography'),
+  ],
 }

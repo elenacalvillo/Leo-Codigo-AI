@@ -2,11 +2,11 @@ const OpenAI = require('openai-api');
 const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
 export default async (req, res) => {
-  let prompt = `Explícame este código: ${req.body.code}`;
+  let prompt = `Explica el código: ${req.body.code}\n\"\"\"\nEsto es lo que el código de arriba está haciendo:\n`;
   const gptResponse = await openai.complete({
-	engine: 'text-davinci-003',
+	engine: 'code-davinci-002',
 	prompt: prompt,
-	temperature: 0.5,
+	temperature: 0,
 	max_tokens: 256,
 	top_p: 1,
 	frequency_penalty: 0,
