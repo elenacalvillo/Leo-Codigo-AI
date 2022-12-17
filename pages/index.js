@@ -97,7 +97,7 @@ export default function Home() {
                   </a>
                 </div>
     
-                <div className="flex justify-center gap-x-12">
+                <div className="invisible hidden flex justify-center gap-x-12">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
