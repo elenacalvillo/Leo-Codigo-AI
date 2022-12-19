@@ -78,7 +78,7 @@ export default function About() {
                     </a>
                   ))}
                 </div>
-                <div className="lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+                <div className="hidden sm:flex lg:min-w-0 lg:flex-1 lg:justify-end">
                   <div className="relative rounded-full py-1 px-3 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                     <span className="text-gray-600">
                       Ver repo en{" "}

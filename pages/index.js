@@ -107,7 +107,7 @@ export default function Home() {
                     </a>
                   ))}
                 </div>
-                <div className="lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+                <div className="hidden sm:flex lg:min-w-0 lg:flex-1 lg:justify-end">
                   <div className="relative rounded-full py-1 px-3 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                     <span className="text-gray-600">
                       Ver repo en{" "}
@@ -135,22 +135,22 @@ export default function Home() {
                     </h1>
     
                     <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                      ¿No sabes qué hace esta función? Pregúntale a la IA:
+                      ¿No sabes qué hace esta función? Pregúntale a Leo.
                     </p>
                     <div className="relative w-full h-48 mt-5">
-                      <div class="absolute top-0 left-20 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+                      <div class="sm:absolute m-5 sm:m-0 top-0 left-0 sm:left-20 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
                         <div class="shrink-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 stroke-slate-300">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                           </svg>
                         </div>
                         <div>
-                          <div class="text-lg text-slate-600">¿Qué hace print(Hello, world!) ?</div>
+                          <div class="sm:text-lg text-slate-600">¿Qué hace print(Hello, world!) ?</div>
                         </div>
                       </div>
-                      <div class="absolute bottom-0 right-20 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+                      <div class="sm:absolute m-5 sm:m-0 bottom-0 right-0 sm:right-20 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
                         <div class="shrink-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 stroke-slate-300">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
                           </svg>
                         </div>
