@@ -83,8 +83,7 @@ export default function About() {
                     <span className="text-gray-600">
                       Ver repo en{" "}
                       <a href="https://github.com/elenacalvillo/Leo-Codigo-AI" className="font-semibold text-indigo-600">
-                        <span className="absolute inset-0" aria-hidden="true" />
-                        Github <span aria-hidden="true">&rarr;</span>
+                        Github
                       </a>
                     </span>
                   </div>
