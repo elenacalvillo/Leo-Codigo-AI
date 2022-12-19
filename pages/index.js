@@ -145,7 +145,7 @@ export default function Home() {
                           </svg>
                         </div>
                         <div>
-                          <div class="text-lg text-slate-600">¿Qué hace print("Hello, world!") ?</div>
+                          <div class="text-lg text-slate-600">¿Qué hace print(Hello, world!) ?</div>
                         </div>
                       </div>
                       <div class="absolute bottom-0 right-20 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
