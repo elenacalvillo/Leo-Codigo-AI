@@ -5,8 +5,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
+  { name: 'About ⮕', href: '/about' },
 ]
 
 export default function Home() {
@@ -97,7 +96,7 @@ export default function Home() {
                   </a>
                 </div>
     
-                <div className="invisible hidden flex justify-center gap-x-12">
+                <div className="flex justify-center gap-x-12">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
@@ -109,9 +108,9 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
-                  <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                  <div className="relative rounded-full py-1 px-3 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                     <span className="text-gray-600">
-                      Ver repositorio en{" "}
+                      Ver repo en{" "}
                       <a href="https://github.com/elenacalvillo/Leo-Codigo-AI" className="font-semibold text-indigo-600">
                         <span className="absolute inset-0" aria-hidden="true" />
                         Github <span aria-hidden="true">&rarr;</span>
@@ -138,10 +137,31 @@ export default function Home() {
                     <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
                       ¿No sabes qué hace esta función? Pregúntale a la IA:
                     </p>
-                    <div className="mt-8 flex gap-x-4 sm:justify-center"></div>
+                    <div className="relative w-full h-48 mt-5">
+                      <div class="absolute top-0 left-20 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+                        <div class="shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <div class="text-lg text-slate-600">¿Qué hace print('Hello, world!') ?</div>
+                        </div>
+                      </div>
+                      <div class="absolute bottom-0 right-20 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+                        <div class="shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="text-slate-600">La función print() muestra en pantalla el texto que se le pasa como argumento.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
     
-                  <form id="codeBlock">
+                  <form id="codeBlock" className="pt-20">
                     <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 shadow-lg">
                       <div class="flex items-center justify-between px-3 py-2 border-b dark:border-gray-600">
                         <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x dark:divide-gray-600">
