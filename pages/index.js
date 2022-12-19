@@ -5,7 +5,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'About', href: '/about' },
+  { name: 'About ⭢', href: '/about' },
 ]
 
 export default function Home() {
@@ -112,7 +112,8 @@ export default function Home() {
                     <span className="text-gray-600">
                       Ver repo en{" "}
                       <a href="https://github.com/elenacalvillo/Leo-Codigo-AI" className="font-semibold text-indigo-600">
-                        Github
+                        <span className="absolute inset-0" aria-hidden="true" />
+                        Github <span aria-hidden="true">&rarr;</span>
                       </a>
                     </span>
                   </div>
@@ -144,7 +145,7 @@ export default function Home() {
                           </svg>
                         </div>
                         <div>
-                          <div class="text-lg text-slate-600">¿Qué hace print('Hello, world!') ?</div>
+                          <div class="text-lg text-slate-600">¿Qué hace print("Hello, world!") ?</div>
                         </div>
                       </div>
                       <div class="absolute bottom-0 right-20 p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">

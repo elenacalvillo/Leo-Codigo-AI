@@ -5,7 +5,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'App', href: '/' },
+  { name: '⭠ App', href: '/' },
 ]
 
 export default function About() {
@@ -83,7 +83,8 @@ export default function About() {
                     <span className="text-gray-600">
                       Ver repo en{" "}
                       <a href="https://github.com/elenacalvillo/Leo-Codigo-AI" className="font-semibold text-indigo-600">
-                        Github
+                        <span className="absolute inset-0" aria-hidden="true" />
+                        Github <span aria-hidden="true">&rarr;</span>
                       </a>
                     </span>
                   </div>
